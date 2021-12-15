@@ -5,12 +5,11 @@ Writing unit tests for service workers made easy.
 <img  width="70%" src="https://miro.medium.com/max/694/1*aO4HRVpU1zQ22rvhAeSK1w.png"/>
 
 ## Note
-This code sample is an enhancement on top of [Service Worker Mock](https://github.com/zackargyle/service-workers/tree/master/packages/service-worker-mock)
-While Service Worker Mock explains how to write unit tests for service works, since it is not maintained any more. I am writing this code sample to unblock ourselves from the current issues in that library.
+This code sample is an enhancement on top of [Service Worker Mock](https://github.com/zackargyle/service-workers/tree/master/packages/service-worker-mock). Service Worker Mock explains how to write unit tests for service works. Since it is not maintained any more, I am writing this code sample to unblock ourselves from the current issues in that library.
 Tests are written using the sample service worker given at [service worker example](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/basic/service-worker.js)
 
 ## Problem with the current version (2.0.5) of service worker mock
-Object.assign(global, makeServiceWorkerEnv()) no longer putts EventTarget methods like addEventListener into the global scope because they are no longer "own" properties of ServiceWorkerGlobalScope
+Object.assign(global, makeServiceWorkerEnv()) no longer puts EventTarget methods like addEventListener into the global scope because they are no longer "own" properties of ServiceWorkerGlobalScope
 
 ## Workaround
 - Make `addEventListener` an enumerable property
