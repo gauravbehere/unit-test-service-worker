@@ -1,6 +1,9 @@
 # unit-test-service-worker
 Writing unit tests for service workers made easy.
 
+<img  width="20%" src="https://seeklogo.com/images/J/jest-logo-F9901EBBF7-seeklogo.com.png"/>
+<img  width="70%" src="https://miro.medium.com/max/694/1*aO4HRVpU1zQ22rvhAeSK1w.png"/>
+
 ## Note
 This code sample is an enhancement on top of [Service Worker Mock](https://github.com/zackargyle/service-workers/tree/master/packages/service-worker-mock)
 While Service Worker Mock explains how to write unit tests for service works, since it is not maintained any more. I am writing this code sample to unblock ourselves from the current issues in that library.
@@ -96,4 +99,7 @@ it('should ignore the requests to external world', async () => {
   expect(response).not.toBeDefined();
 });
 ```
+
+## Coverage
+<img src="https://github.com/gauravbehere/unit-test-service-worker/blob/main/coverage.PNG"/>
 
